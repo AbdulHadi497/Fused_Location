@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/latitudeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Latitude: "/>
+
+    <TextView
+        android:id="@+id/longitudeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/latitudeTextView"
+        app:layout_constraintEnd_toEndOf="@+id/latitudeTextView"
+        app:layout_constraintBottom_toTopOf="@+id/latitudeTextView"
+        android:text="Longitude: "/>
+<!--    <TextView-->
+<!--        android:id="@+id/addressText"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/longitudeTextView"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/longitudeTextView"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/longitudeTextView"-->
+<!--        android:text="Address"-->
+<!--        />-->
+<!--    <TextView-->
+<!--        android:id="@+id/longLat"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/latitudeTextView"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/latitudeTextView"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/latitudeTextView"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/btGetLocation"-->
+<!--        android:text="latLong"/>-->
+    <EditText
+        android:id="@+id/locationId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/longitudeTextView"
+        app:layout_constraintBottom_toTopOf="@+id/latitudeTextView"
+        app:layout_constraintStart_toStartOf="@+id/longitudeTextView"
+        app:layout_constraintEnd_toEndOf="@+id/longitudeTextView"
+        android:hint="Get Longitude"
+        />
+
+    <Button
+        android:id="@+id/btLong"
+        android:text="Long"
+        android:visibility="gone"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="@+id/btGetLocation"
+        app:layout_constraintEnd_toEndOf="@+id/btGetLocation"
+        app:layout_constraintTop_toBottomOf="@+id/btGetLocation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="50dp"
+        android:layout_width="200dp"/>
+
+    <Button
+        android:id="@+id/btGetLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="30dp"
+        android:text="Get Current Location"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/latitudeTextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+ />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
